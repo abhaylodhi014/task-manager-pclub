@@ -44,82 +44,87 @@ const TaskItem = ({ task, deleteTask, toggleComplete, handleUpdate, theme }) => 
       >
         {isEditing ? (
           // Editing mode: displays input fields for task details.
-          <div className="container animate__animated animate__fadeInUp">
-            <h2 className="mt-4 fs-3 fw-bold text-secondary">Update your task</h2>
-            <div className="edit-task d-flex flex-column">
-              {/* Input for the task title */}
-              <input
-                style={{
-                  backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
-                  color: theme === 'dark' ? 'white' : 'black',
-                }}
-                className="form-label form-control my-3"
-                type="text"
-                name="title"
-                value={updatedTask.title}
-                onChange={handleChange}
-                required
-              />
+          <form className="container animate__animated animate__fadeInUp">
+  <h2 className="mt-4 fs-3 fw-bold text-secondary text-center">Update your task</h2>
+  <div className="edit-task d-flex flex-column">
+    {/* Input for the task title */}
+    <input
+      style={{
+        backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
+        color: theme === 'dark' ? 'white' : 'black',
+      }}
+      className="form-label form-control my-3"
+      type="text"
+      name="title"
+      value={updatedTask.title}
+      onChange={handleChange}
+      required
+    />
 
-              {/* Textarea for the task description */}
-              <textarea
-                style={{
-                  backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
-                  color: theme === 'dark' ? 'white' : 'black',
-                }}
-                className="mb-3 form-control"
-                name="description"
-                value={updatedTask.description}
-                onChange={handleChange}
-                required
-              ></textarea>
+    {/* Textarea for the task description */}
+    <textarea
+      style={{
+        backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
+        color: theme === 'dark' ? 'white' : 'black',
+      }}
+      className="mb-3 form-control"
+      name="description"
+      value={updatedTask.description}
+      onChange={handleChange}
+      required
+    ></textarea>
 
-              {/* Container for priority selection and due date */}
-              <div className="container mx-2 d-flex justify-content-evenly">
-                {/* Priority dropdown */}
-                <select
-                  style={{
-                    backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
-                    color: theme === 'dark' ? 'white' : 'black',
-                  }}
-                  className="rounded-4 border-2"
-                  name="priority"
-                  value={updatedTask.priority}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="none">Priority</option>
-                  <option value="Low">Low</option>
-                  <option value="Medium">Medium</option>
-                  <option value="High">High</option>
-                </select>
+    {/* Container for priority selection and due date */}
+    <div className="row g-3">
+      {/* Priority dropdown */}
+      <div className="col-12 col-md-6">
+        <select
+          style={{
+            backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
+            color: theme === 'dark' ? 'white' : 'black',
+          }}
+          className="form-select rounded-4 border-2"
+          name="priority"
+          value={updatedTask.priority}
+          onChange={handleChange}
+          required
+        >
+          <option value="none">Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
 
-                {/* Due date input */}
-                <input
-                  style={{
-                    backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
-                    color: theme === 'dark' ? 'white' : 'black',
-                  }}
-                  className="rounded-3 border-1 px-2"
-                  type="date"
-                  name="dueDate"
-                  value={updatedTask.dueDate}
-                  onChange={handleChange}
-                  required
-                />
-                {/* Save and Cancel buttons */}
-                <button className="btn btn-primary rounded-3" onClick={handleSave}>
-                  Save
-                </button>
-                <button
-                  className="btn btn-primary rounded-3"
-                  onClick={() => setIsEditing(false)}
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
+      {/* Due date input */}
+      <div className="col-12 col-md-6">
+        <input
+          style={{
+            backgroundColor: theme === 'dark' ? 'rgb(75, 77, 105)' : 'white',
+            color: theme === 'dark' ? 'white' : 'black',
+          }}
+          className="form-control rounded-3 border-1 px-2"
+          type="date"
+          name="dueDate"
+          value={updatedTask.dueDate}
+          onChange={handleChange}
+          required
+        />
+      </div>
+    </div>
+
+    {/* Save and Cancel buttons */}
+    <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3">
+      <button className="btn btn-primary rounded-3 me-md-2 mb-2 mb-md-0" onClick={handleSave}>
+        Save
+      </button>
+      <button className="btn btn-secondary rounded-3" onClick={() => setIsEditing(false)}>
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
+
         ) : (
           // View mode: displays the task details.
           <div
