@@ -172,7 +172,7 @@ const Tasks = ({ tasks, setTasks, addTask, showAlert, theme }) => {
         className='form-control rounded-5 mx-3'
         style={{backgroundColor: theme==='dark'?'rgb(75, 77, 105)':'white' , color: theme==='dark'?'white':'black' ,
           height:"45px" ,
-          width:"350px" ,
+          width:"60%" ,
           border:"1px solid"
         }}
           type="text"
