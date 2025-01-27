@@ -1,0 +1,107 @@
+/* Global Reset */
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
+  body{
+
+    background: url("/wave2.avif");
+   /* background-size: cover; */
+   background-repeat: repeat; 
+  
+   background-size: cover;
+   
+   }
+  /* Responsive Layout for Tasks */
+  .tasks {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+    
+    
+  }
+
+ 
+  
+  .task-item:hover {
+    transform: scale(1.02);
+  }
+  
+ 
+  .task-item button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    background: #007bff;
+    cursor:cell;
+    border-radius: 10px;
+  }
+  .button{
+    cursor: pointer;
+   
+  }
+  .btn:hover{
+    transform: scale(1.02);
+  }
+  .task-item button:hover {
+    background: #0056b3;
+  }
+  
+  /* Circular Progress Bar */
+  .progress {
+    margin: 1rem auto;
+    max-width: 120px;
+    
+  }
+  .footer {
+   
+  
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+  
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-links li {
+    display: inline;
+  }
+  
+  .footer-links a {
+    color: #02c7fd; /* Light blue for links */
+    text-decoration: none;
+    font-size: 14px;
+   
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+ 
