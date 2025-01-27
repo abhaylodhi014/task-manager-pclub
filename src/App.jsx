@@ -87,7 +87,7 @@ const App = () => {
 
           {/* Home page (default route) */}
           <Route
-            path="/task-manager"
+            path="/"
             element={
               <Home
                 tasks={tasks}
