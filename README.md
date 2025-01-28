@@ -3,6 +3,9 @@
 ## Description
 The **Task Manager** is a React-based web application that helps users manage their daily tasks efficiently. The application includes features like adding, updating, deleting tasks, filtering and sorting tasks, tracking progress, drag-and-drop task reordering, and reminders for due tasks. Tasks are stored persistently using the browser's `localStorage`.
 
+## Demo
+Click here to view the deployed project  [task-manager-pclub.vercel.app](https://task-manager-pclub.vercel.app/)
+
 ## Features
 1. **Add Tasks**: Create new tasks with a title, description, and optional due date.
 2. **Delete Tasks**: Remove tasks from the list.
@@ -67,12 +70,24 @@ Make sure you have the following installed:
 5. Monitor your task progress with the circular progress bar.
 
 ## Screenshots
-(Include relevant screenshots here to showcase the UI and features of the application.)![Screenshot 2025-01-27 193005](https://github.com/user-attachments/assets/5faff71e-4025-41c2-9910-25d4da8cfd16)
-![Screenshot 2025-01-27 192920](https://github.com/user-attachments/assets/d92ef66a-d7a3-4556-8f35-eb9272578d56)
-![Screenshot 2025-01-27 192858](https://github.com/user-attachments/assets/87121874-12cc-4e07-b0fe-dfe36b8c35bd)
-![Screenshot 2025-01-27 193304](https://github.com/user-attachments/assets/d26e2e58-2f45-4f3d-91a3-83448af189cc)
-![Screenshot 2025-01-27 193212](https://github.com/user-attachments/assets/adf99713-73b3-4752-9e13-1b88b203a2eb)
 
+### Screenshot 1
+![App Screenshot](./public/Screenshot%202025-01-27%20193212.png)
+
+### Screenshot 2
+![App Screenshot](./public/Screenshot%202025-01-27%20193304.png)
+
+### Screenshot 3
+![App Screenshot](./public/Screenshot%202025-01-27%20192858.png)
+
+### Screenshot 4
+![App Screenshot](./public/Screenshot%202025-01-27%20192920.png)
+
+### Screenshot 5
+![App Screenshot](./public/Screenshot%202025-01-27%20193005.png)
+
+### Screenshot 6
+![App Screenshot](./public/Screenshot%202025-01-29%20013442.png)
 
 ## Contributing
 Contributions are welcome! If you want to contribute:
